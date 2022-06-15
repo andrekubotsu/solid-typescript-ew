@@ -15,5 +15,7 @@ export default abstract class TaxItem extends Item {
     // return 0
   }
 
+  //! a class segregation helped to solve OCP and LSP problems
+
     abstract getTax(): number
 }
