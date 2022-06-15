@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "build": "npx tsc src/index.ts",
     "test": "jest"
   },
   "author": "",
