@@ -1,1 +1,1 @@
-console.log("Just nothing ;)")
+console.log('Just nothing ;)')
