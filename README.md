@@ -27,3 +27,7 @@ Studies purpose only. It's not just for OO.
    - invariables must keep consistents: if a subclass accepts that the conceptual state of the class hierarchy be invalid.
 
 4. ISP - Interface Segregation Principle: be careful with broad wide interfaces, don't make subclasses implement methods that they don't need.
+
+5. DIP - Dependency inversion principle:
+   - high-level module (closer to business logic, more generalistic) should not depend on low-level modules.
+   - both should depend on abastractions (high or low level)

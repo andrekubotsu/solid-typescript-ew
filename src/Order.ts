@@ -1,11 +1,14 @@
 import Item from './Item'
 import TaxItem from './TaxItem'
-
+// import fs from 'fs/promises'
+import MessageData from './MessageData'
 export default class Order {
   items: Item[]
+  messageData: MessageData
 
-  constructor () {
+  constructor (messageData: MessageData) {
     this.items = []
+    this.messageData = messageData
   }
 
   addItem (item: Item) {
@@ -27,5 +30,13 @@ export default class Order {
     }
 
     return taxes
+  }
+
+  async printMessage (language: string) {
+    // if (language === 'pt') return `O total foi de R$${this.getTotal()}, os impostos foram R$${this.getTaxes()}. Obrigado!`
+    // if (language === 'en') return `The total was R$${this.getTotal()}, the taxes was R$${this.getTaxes()}. Thanks!`
+    // const message = await fs.readFile(`./messages/${language}.txt`, 'utf8') // by using this, DIP is not being used here!
+    const message = await this.messageData.read(language)
+    return message.replace('{total}', this.getTotal() + '').replace('{taxes}', this.getTaxes() + '')
   }
 }
