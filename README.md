@@ -16,6 +16,8 @@ Studies purpose only. It's not just for OO.
 
 ## SOLID
 
+It comes to bring a more flexible software, less fragile, easier to maintain and evolve.
+
 1. SRP - Single reponsability principle: separate things that CHANGES FOR DIFFERENT REASONS.It is about moving responsabilities to right places!
 
 2. OCP - Open closed principle: we should be closed for modifications and open for extension. Create an abstract class - closing for modifications and opening for extension
